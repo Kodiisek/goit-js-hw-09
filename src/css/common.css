@@ -16,3 +16,67 @@ img {
   display: block;
   max-width: 100%;
 }
+
+/* Dodaj do pliku CSS */
+
+/* Styl dla pola wyboru daty */
+.flatpickr-calendar {
+  background-color: #fff;
+  border: 1px solid #ccc;
+  border-radius: 5px;
+  box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+}
+
+/* Styl dla przycisków w kalendarzu */
+.flatpickr-day {
+  background-color: transparent;
+  color: #333;
+}
+
+.flatpickr-day:hover {
+  background-color: #f0f0f0;
+}
+
+.flatpickr-monthDropdown-months,
+.flatpickr-yearDropdown-years,
+.flatpickr-hour,
+.flatpickr-minute {
+  background-color: #f0f0f0;
+  border: 1px solid #ccc;
+}
+
+.flatpickr-prev-month,
+.flatpickr-next-month,
+.flatpickr-prev-year,
+.flatpickr-next-year {
+  background-color: transparent;
+  color: #333;
+}
+
+.flatpickr-prev-month:hover,
+.flatpickr-next-month:hover,
+.flatpickr-prev-year:hover,
+.flatpickr-next-year:hover {
+  background-color: #f0f0f0;
+}
+
+/* Styl dla przycisku "Today" */
+.flatpickr-todayButton {
+  background-color: #f0f0f0;
+  border: 1px solid #ccc;
+  border-top: none;
+}
+
+.flatpickr-todayButton:hover {
+  background-color: #e0e0e0;
+}
+
+/* Styl dla przycisku "Clear" */
+.flatpickr-clear {
+  background-color: #f0f0f0;
+  border: 1px solid #ccc;
+}
+
+.flatpickr-clear:hover {
+  background-color: #e0e0e0;
+}
