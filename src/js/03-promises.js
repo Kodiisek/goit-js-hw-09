@@ -14,27 +14,22 @@ function createPromise(position, delay) {
 document.querySelector('.form').addEventListener('submit', function(event) {
   event.preventDefault();
 
-  const delay = parseInt(document.querySelector('[name="delay"]').value);
-  const step = parseInt(document.querySelector('[name="step"]').value);
+  const firstDelay = parseInt(document.querySelector('[name="delay"]').value);
+  const stepDelay = parseInt(document.querySelector('[name="step"]').value);
   const amount = parseInt(document.querySelector('[name="amount"]').value);
 
   async function createPromises() {
+    let currentDelay = firstDelay;
     for (let i = 1; i <= amount; i++) {
       try {
-        const { position, delay: currentDelay } = await createPromise(i, delay + (i - 1) * step);
+        const { position } = await createPromise(i, currentDelay);
         console.log(`✅ Fulfilled promise ${position} in ${currentDelay}ms`);
-      } catch ({ position, delay: currentDelay }) {
+      } catch ({ position }) {
         console.log(`❌ Rejected promise ${position} in ${currentDelay}ms`);
       }
+      currentDelay = stepDelay; // Zastąpienie wartości currentDelay wartością stepDelay dla kolejnej obietnicy
     }
   }
 
   createPromises();
 });
-
-
-
-
-
-
-
